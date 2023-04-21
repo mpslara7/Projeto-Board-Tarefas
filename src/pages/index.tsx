@@ -24,6 +24,16 @@ export default function Home() {
         <h1 className={styles.title}>
           Sistema feito para voçê organizar seus estudos e suas tarefas
         </h1>
+
+        <div className={styles.infoContent}>
+          <section className={styles.box}>
+            <span>+12 posts</span>
+          </section>
+          <section className={styles.box}>
+            <span>+90 comentários</span>
+          </section>
+        </div>
+
       </main>
     </div>
   )
