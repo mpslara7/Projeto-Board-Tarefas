@@ -1,6 +1,6 @@
-import styles from './styles.module.css'
-import { useSession, signIn, signOut } from 'next-auth/react'
-import Link from 'next/link'
+import styles from './styles.module.css';
+import { useSession, signIn, signOut } from 'next-auth/react';
+import Link from 'next/link';
 
 export function Header(){
 
@@ -23,6 +23,7 @@ export function Header(){
                         </Link>
                     )}
                 </nav>
+
 
                 { status === "loading" ? (
                    <></> 
