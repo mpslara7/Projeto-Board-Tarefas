@@ -3,6 +3,8 @@ import styles from './styles.module.css'
 import Head from 'next/head'
 import { getSession } from 'next-auth/react'
 import { TextArea } from '@/components/textArea'
+import {FiShare2} from 'react-icons/fi'
+import { FaTrash } from 'react-icons/fa'
 
 export default function Dashboard(){
     return(
@@ -20,7 +22,10 @@ export default function Dashboard(){
                         </h1>
 
                         <form>
-                            <TextArea/>
+                            <TextArea 
+                                placeholder="Digite qual sua tarefa..."
+                                   
+                            />
                             <div className={styles.checkboxArea}>
                                 <input 
                                     type="checkbox"
@@ -36,6 +41,32 @@ export default function Dashboard(){
                             </button>
                         </form>
                     </div>
+                </section>
+
+                <section className={styles.teskContaiener}>
+                    <h1>Minhas Tarefas</h1>
+                        
+                        <article className={styles.task}>
+                            <div className={styles.tagContainer}>
+                                <label className={styles.tag}>PUBLICO</label>
+                                <button className={styles.shareButton}>
+                                    <FiShare2
+                                        size={22}
+                                        color='#3183ffs'
+                                    />
+                                </button>
+                            </div>
+                            
+                            <div className={styles.taskContent}>
+                                <p>Minha tarefa</p>
+                                <button className={styles.trashButton}>
+                                    <FaTrash
+                                        size={24}
+                                        color='#ea3140'
+                                    />
+                                </button>
+                            </div>
+                        </article>
                 </section>
             </main>
 
