@@ -1,8 +1,8 @@
-import styles from '@/styles/home.module.css'
-import Head from 'next/head'
-import Image from 'next/image'
+import styles from '@/styles/home.module.css';
+import Head from 'next/head';
+import Image from 'next/image';
 
-import heroImg from '../../public/assets/hero.png'
+import heroImg from '../../public/assets/hero.png';
 
 export default function Home() {
   return (
@@ -10,13 +10,12 @@ export default function Home() {
       <Head>
         <title>Tarefas | Organize suas tarefas</title>
       </Head>
-    
 
       <main className={styles.main}>
         <div className={styles.logoContent}>
           <Image
             className={styles.hero}
-            alt= "Logo Tarefas"
+            alt="Logo Tarefas"
             src={heroImg}
             priority
           />
@@ -33,8 +32,7 @@ export default function Home() {
             <span>+90 comentários</span>
           </section>
         </div>
-
       </main>
     </div>
-  )
+  );
 }
