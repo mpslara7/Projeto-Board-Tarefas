@@ -1,18 +1,17 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore'
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCgU1Y1ysie89OplI4tesQ-jZBmvjCRU8Q",
-  authDomain: "tarefas-plus-1f985.firebaseapp.com",
-  projectId: "tarefas-plus-1f985",
-  storageBucket: "tarefas-plus-1f985.appspot.com",
-  messagingSenderId: "310634433998",
-  appId: "1:310634433998:web:bb122e9a3dbbde2b4fef9f"
+  apiKey: 'AIzaSyDFGtvBBJVfVZvvXYsefNu5AomxxO9GmKk',
+  authDomain: 'gerenciador-tarefas-a9fdc.firebaseapp.com',
+  projectId: 'gerenciador-tarefas-a9fdc',
+  storageBucket: 'gerenciador-tarefas-a9fdc.appspot.com',
+  messagingSenderId: '967813097784',
+  appId: '1:967813097784:web:e2a6103a135019271c79cd',
 };
 
+const fireBaseApp = initializeApp(firebaseConfig);
 
-const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(fireBaseApp);
 
-const db = getFirestore(firebaseApp)
-
-export { db }
+export { db };
