@@ -59,5 +59,6 @@ export const getStaticProps: GetStaticProps = async () => {
       posts: postSnapShot.size || 0,
       comments: commentSnapShot.size || 0,
     },
+    revalidate: 60,
   };
 };
