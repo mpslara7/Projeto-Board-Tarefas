@@ -77,6 +77,10 @@ export default function Task({ item, allComments }: TaskProps) {
     try {
       const docRef = doc(db, 'comments', id);
       await deleteDoc(docRef);
+
+      const deleteComment = comments.filter((item) => item.id !== id);
+
+      setComments(deleteComment);
     } catch (err) {
       console.log(err);
     }
